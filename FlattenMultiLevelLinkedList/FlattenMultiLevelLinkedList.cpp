@@ -157,6 +157,9 @@ void ConvertVerticalToHorizontal(ListNode* pNode)
 
 ListNode* FlattenTheLinkedList(ListNode* pHead)
 {
+    if (pHead == nullptr)
+        return nullptr;
+
     ListNode* pCurrentNode = pHead;
     pHead = pHead->next;
     ConvertVerticalToHorizontal(pCurrentNode);
