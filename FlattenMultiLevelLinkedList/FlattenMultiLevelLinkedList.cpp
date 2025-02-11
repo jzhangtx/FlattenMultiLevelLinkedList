@@ -115,16 +115,14 @@ ListNode* MergeLists(ListNode* pHead1, ListNode* pHead2)
         {
             pNewTail->next = pHead1;
             pHead1 = pHead1->next;
-            pNewTail->down = nullptr;
-            pNewTail = pNewTail->next;
-        }
+         }
         else
         {
             pNewTail->next = pHead2;
             pHead2 = pHead2->next;
-            pNewTail->down = nullptr;
-            pNewTail = pNewTail->next;
         }
+        pNewTail->down = nullptr;
+        pNewTail = pNewTail->next;
     }
 
     while (pHead1 != nullptr)
